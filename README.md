@@ -233,7 +233,7 @@ Certainly! Here are five interview questions for each of the specified topics:
 These questions cover a range of topics within Nexus/JFrog, Docker, Kubernetes, Ansible, and Terraform, providing a solid foundation for interviewing candidates with experience in these areas.
 
  
-##Git deployment strategy  
+##Git branching strategy  
 While Gitflow, GitHub Flow, and GitLab Flow are all popular branching strategies used in Git, they have distinct characteristics and workflows. Let's briefly outline each of them:
 
 1. **Gitflow:**
