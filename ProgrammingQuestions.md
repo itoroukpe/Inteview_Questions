@@ -22,36 +22,35 @@ numbers_list = [12, 5, 27, 8, 15]
 result = find_largest_number(numbers_list)
 print("The largest number is:", result)
 ```
-In Python 2, you can use the `unittest` module to write test cases. Here's an example of a test case for the `find_largest_number` function:
+## Suppose you are given a binary tree represented as an array. For example, [3,6, 2, 9, -1, 10] represents the following binary tree (where -1 is a non-existent node): Write a function that determines whether the left or right branch of the tree is larger. The size of each branch is the sum of the node values. The function should return the string "Right" if the right side larger and "Left" if the left side is larger. IF the tree has 0 nodes or if the size of the branches are equal, return the empty string. 
 
-```python
-import unittest
+```py
+def compare_branches(tree):
+    def get_branch_sum(index):
+        # Helper function to calculate the sum of the branch starting from the given index
+        if index >= len(tree) or tree[index] == -1:
+            return 0
 
-class TestFindLargestNumber(unittest.TestCase):
+        left_index = 2 * index + 1
+        right_index = 2 * index + 2
 
-    def test_find_largest_number(self):
-        # Test case where the list is not empty
-        numbers_list = [12, 5, 27, 8, 15]
-        result = find_largest_number(numbers_list)
-        self.assertEqual(result, 27)
+        return tree[index] + get_branch_sum(left_index) + get_branch_sum(right_index)
 
-        # Test case where the list is empty
-        empty_list = []
-        result_empty_list = find_largest_number(empty_list)
-        self.assertEqual(result_empty_list, 0)
+    # Calculate the sum of the left and right branches
+    left_sum = get_branch_sum(1)  # Start from the root's left child
+    right_sum = get_branch_sum(2)  # Start from the root's right child
 
-        # Test case with negative numbers
-        negative_numbers = [-5, -8, -2, -1]
-        result_negative = find_largest_number(negative_numbers)
-        self.assertEqual(result_negative, -1)
+    # Compare the sums and return the result
+    if left_sum > right_sum:
+        return "Left"
+    elif right_sum > left_sum:
+        return "Right"
+    else:
+        return ""
 
-        # Test case with repeated numbers
-        repeated_numbers = [7, 7, 7, 7]
-        result_repeated = find_largest_number(repeated_numbers)
-        self.assertEqual(result_repeated, 7)
+# Example usage:
+binary_tree = [3, 6, 2, 9, -1, 10]
+result = compare_branches(binary_tree)
+print(result)
 
-if __name__ == '__main__':
-    unittest.main()
-```
-
-In this test case, we have covered scenarios where the list is not empty, the list is empty, there are negative numbers, and there are repeated numbers. The `unittest` module provides assertions like `assertEqual` to check if the actual result matches the expected result. To run the test case, execute the script, and it will run all the test methods in the `TestFindLargestNumber` class.
+```py
