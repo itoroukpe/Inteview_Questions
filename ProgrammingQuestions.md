@@ -1,6 +1,6 @@
-### Programming Question
+## Programming Question
 
-# write a function in python 2 write a function that takes a list of numbers, numbers, and return the largest number in the list. If there are no numbers in the list, return 0. 
+#### write a function in python 2 write a function that takes a list of numbers, numbers, and return the largest number in the list. If there are no numbers in the list, return 0. 
 ```py
 def find_largest_number(numbers):
     # Check if the list is empty
@@ -22,7 +22,7 @@ numbers_list = [12, 5, 27, 8, 15]
 result = find_largest_number(numbers_list)
 print("The largest number is:", result)
 ```
-# Suppose you are given a binary tree represented as an array. For example, [3,6, 2, 9, -1, 10] represents the following binary tree (where -1 is a non-existent node): Write a function that determines whether the left or right branch of the tree is larger. The size of each branch is the sum of the node values. The function should return the string "Right" if the right side larger and "Left" if the left side is larger. IF the tree has 0 nodes or if the size of the branches are equal, return the empty string. 
+#### Suppose you are given a binary tree represented as an array. For example, [3,6, 2, 9, -1, 10] represents the following binary tree (where -1 is a non-existent node): Write a function that determines whether the left or right branch of the tree is larger. The size of each branch is the sum of the node values. The function should return the string "Right" if the right side larger and "Left" if the left side is larger. IF the tree has 0 nodes or if the size of the branches are equal, return the empty string. 
 
 ```py
 def compare_branches(tree):
