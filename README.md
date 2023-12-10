@@ -90,6 +90,10 @@ Certainly! Here are five interview questions for each of the specified topics:
 
 1. **What is Maven, and how does it differ from Ant?**
    - **Answer:** Maven is a build and project management tool that uses conventions over configurations. Ant is a build tool without predefined conventions.
+"Maven is a build and project management tool that follows the principle of 'Convention over Configuration.'"
+
+This means that Maven encourages a standard project structure and naming conventions. By adhering to these conventions, developers can focus more on the actual code and less on configuring build settings. For example, Maven expects source code to be in the `src/main/java` directory by default, and it follows a standard lifecycle (e.g., compile, test, package) without requiring explicit configuration for these common tasks.
+
 
 2. **Explain the purpose of the Maven POM file.**
    - **Answer:** The POM (Project Object Model) file defines the configuration and dependencies for a Maven project, including plugins, goals, and project metadata.
